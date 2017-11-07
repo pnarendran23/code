@@ -5,10 +5,10 @@ files:
     destination: /var/www/html/
 hooks:
   BeforeInstall:
-    - location: Script/before_install
+    - location: Scripts/before_install
       timeout: 300
       runas: ubuntu
   AfterInstall:
-    - location: Script/restart_server
+    - location: Scripts/restart_server
       timeout: 300
       runas: ubuntu
