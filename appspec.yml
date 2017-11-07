@@ -12,6 +12,7 @@ permissions:
      type:
        - file
 hooks:
+<<<<<<< HEAD
    BeforeInstall:
     - location: scripts/installapache.sh
       runas: root
@@ -20,3 +21,13 @@ hooks:
    AfterInstall:
     - location: scripts/restartapache.sh
       runas: root
+=======
+  BeforeInstall:
+    - location: Scripts/before_install
+      timeout: 300
+      runas: ubuntu
+  AfterInstall:
+    - location: Scripts/restart_server
+      timeout: 300
+      runas: ubuntu
+>>>>>>> a9da398c239d6630da9c75e17da3b5530e3ec8f0
