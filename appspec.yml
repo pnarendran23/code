@@ -15,9 +15,9 @@ permissions:
 hooks:
    BeforeInstall:
     - location: Scripts/installapache.sh
-      runas: root
+      runas: ubuntu
     - location: Scripts/startapache.sh
-      runas: root
+      runas: ubuntu
    AfterInstall:
     - location: Scripts/restartapache.sh
-      runas: root
+      runas: ubuntu
