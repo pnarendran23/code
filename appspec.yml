@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-   - source: /charts
-     destination: /var/ionic_project
+   - source: /
+     destination: /var/www/html
      overwrite: true
 permissions:
    - object: /var/www/html
