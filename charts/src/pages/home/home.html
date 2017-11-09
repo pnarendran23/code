@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Charts
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div style="width: 90%;">
+    <button ion-button float-right *ngIf = "daily" (click) = "goback()" color = "dark"><< Monthly Readings</button>
+    <canvas id="createCurrYearHccGapChart"
+        baseChart
+        [chartType]="'bar'"
+        [datasets]="chartData"
+        [labels]="chartLabels"
+        [options]="chartOptions"        
+        [colors] = "myColors"
+        [legend]="true"
+        (chartClick)="onChartClick($event)">
+    </canvas>
+    
+  </div>
+</ion-content>
