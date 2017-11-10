@@ -23,7 +23,5 @@ hooks:
       runas: root
     - location: Scripts/movefiles.sh
       runas: root
-    - location: Scripts/pushtos3.sh
-      runas: root
     - location: Scripts/restartapache.sh
       runas: root
