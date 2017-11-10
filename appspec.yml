@@ -1,11 +1,11 @@
 version: 0.0
 os: linux
 files:
-   - source: /
-     destination: /var/www/html
+   - source: /charts
+     destination: /home/ubuntu/charts
      overwrite: true
 permissions:
-   - object: /var/www/html
+   - object: /home/ubuntu/charts
      pattern: "**"
      owner: root
      group: root
@@ -16,8 +16,12 @@ hooks:
    BeforeInstall:
     - location: Scripts/installapache.sh
       runas: root
+    - location: Scripts/ionic.sh
+      runas: root
     - location: Scripts/startapache.sh
       runas: root
    AfterInstall:
+    - location: Scripts/movefiles.sh
+      runas: root
     - location: Scripts/restartapache.sh
       runas: root
