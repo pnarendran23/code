@@ -16,11 +16,11 @@ hooks:
    BeforeInstall:
     - location: Scripts/installapache.sh
       runas: root
-    - location: Scripts/ionic.sh
-      runas: root
     - location: Scripts/startapache.sh
       runas: root
    AfterInstall:
+    - location: Scripts/ionic.sh
+      runas: root
     - location: Scripts/movefiles.sh
       runas: root
     - location: Scripts/restartapache.sh
